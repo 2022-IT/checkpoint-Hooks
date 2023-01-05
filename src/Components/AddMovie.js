@@ -31,7 +31,7 @@ const AddMovie = ({AddNewMovie}) => {
   const handleShow = () => setShow(true);
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
+      <Button style={{color:"black",fontWeight:"bold",backgroundColor:"yellow"}}variant="primary" onClick={handleShow}>
         Add Movie
       </Button>
 
