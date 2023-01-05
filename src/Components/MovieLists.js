@@ -1,6 +1,7 @@
 import { Rating } from '@mui/material'
 import React from 'react'
 import { Card, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const MovieLists = ({movies}) => {
   return (
@@ -8,7 +9,7 @@ const MovieLists = ({movies}) => {
  
       {movies.map(movie => (
         <Col style={{width:'18rem'}}>
-          <Card style={{width:'18rem'}} >
+          <Card as={Link} style={{width:'18rem',marginBottom:"1.4cm"}} to={'/MovieDetails1/'+ movie.id} >
             <Card.Img style={{width:'18rem',height:'370px'}}  src={movie.posterUrl} />
             <Card.Body>
               <Card.Title>{movie.title}</Card.Title>
